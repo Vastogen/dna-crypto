@@ -20,14 +20,35 @@
     footer{font-size:13px;color:#475569;margin-top:28px;border-top:1px solid #eef2f6;padding-top:18px}
     a{color:#2563eb}
 
-    pre, code {
-  background: #f8fafc !important; /* light background */
-  color: #0f172a !important;      /* dark text */
-  line-height: 1.4;
+   /* --- Code blocks: GitHub Pages override fix --- */
+.container pre {
+  background: #f8fafc;           /* light bg */
+  color: #0f172a;                 /* dark text */
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.6;               /* prevents cramped lines */
+  white-space: pre;               /* no wrapping */
+  overflow-x: auto;               /* scroll for long lines */
+  overflow-y: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: none;   /* avoid weird ligatures */
+}
+.container pre code {
+  background: transparent !important; /* kill dark inner bg */
+  color: inherit !important;
+  padding: 0 !important;
+  display: block;                 /* avoids inline spacing issues */
+}
+.container code {                 /* inline code only */
+  background: #eef2ff;
+  color: #111827;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 13px;
-  border-radius: 8px;
-  padding: 12px;
-  overflow-x: auto;
 }
 
   </style>
